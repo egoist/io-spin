@@ -1,11 +1,10 @@
 var spin = require('..')
 
-spin.run('Computing:', 'Spin1')
+spin.run()
+//spin.run('Coumputing:', 'Box1')
 
 setTimeout(function () {
 	spin.destroy()
 }, 3000)
 
-
-
-
+//spin.restart()

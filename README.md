@@ -14,6 +14,7 @@ $ npm install io-spin
 spin.start('Downloading:', 'Spin1')
 spin.restart('Computing:', 'Box1')
 spin.stop()
+spin.destroy()
 ```
 
 ## GIF (original from tj/go-spin)
