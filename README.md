@@ -1,5 +1,7 @@
 # io-spin
 
+[![NPM](https://nodei.co/npm/io-spin.png?downloads=true&stars=true)](https://nodei.co/npm/io-spin/)
+
 Little terminal spinner lib for Node.js and io.js
 
 ## Installation
