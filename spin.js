@@ -21,7 +21,8 @@ var pos = 0
 	, words = ''
 
 function Spin (words, type) {
-	var spinner = spinners[type] 
+	var spinner = type ? spinners[type] : spinners.Spin1
+	words = words || ''
 	process.stdout.write('\r\x1b[36m' + words + '\033[m ' + spinner.charAt(pos) + ' ')
 	if (pos === spinner.length - 1)
 		pos = 0
@@ -37,15 +38,22 @@ function restart (words, type) {
 	Spin(words, type)
 }
 
-function destroy () {
+function stop () {
 	for (var i in timeouts) {
 		clearTimeout(timeouts[i]);
 	}
 	timeouts = []
 }
 
-exports.stop = exports.destroy = destroy
+function destroy () {
+	process.stdout.write('\r\x1b[36m\033[m')
+	stop()
+}
+
+exports.stop  = stop
 
 exports.start = exports.run = Spin
+
+exports.destroy = destroy
 
 exports.restart = restart
