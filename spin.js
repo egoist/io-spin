@@ -46,7 +46,8 @@ function stop () {
 }
 
 function destroy () {
-	process.stdout.write('\r\x1b[36m\033[m')
+	var width = (process.stdout.isTTY) ? process.stdout.getWindowSize()[0] : 0
+	process.stdout.write('\r\x1b[36m'+ (Array(Math.floor(width) + 1).join(' ')) +'\033[m')
 	stop()
 }
 

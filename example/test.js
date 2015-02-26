@@ -5,6 +5,7 @@ spin.run()
 
 setTimeout(function () {
 	spin.destroy()
+  console.log('1')
 }, 3000)
 
 //spin.restart()
