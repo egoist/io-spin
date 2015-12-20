@@ -14,7 +14,9 @@ var spinners = {
   Spin6: '▌▄▐▀',
   Spin7: '╫╪',
   Spin8: '■□▪▫',
-  Spin9: '←↑→↓'
+  Spin9: '←↑→↓',
+  Chinese1: '一十干王土十一',
+  Chinese2: '嬲嫐'
 }
 
 function Spin (type, words) {
