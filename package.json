@@ -1,24 +1,24 @@
 {
   "name": "io-spin",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "TJ Holowaychuk's go-spin node.js port",
   "main": "spin.js",
   "scripts": {
-    "test": "node example/test.js"
+    "test": "node example/spin.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/0x142857/io-spin.git"
+    "url": "https://github.com/egoist/io-spin.git"
   },
   "keywords": [
     "spin",
     "tj",
     "terminal"
   ],
-  "author": "0x142857 <0x142857@gmail.com> (https://0x142857.com/)",
+  "author": "EGOIST <0x142857@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/0x142857/io-spin/issues"
+    "url": "https://github.com/egoist/io-spin/issues"
   },
-  "homepage": "https://github.com/0x142857/io-spin"
+  "homepage": "https://github.com/egoist/io-spin"
 }

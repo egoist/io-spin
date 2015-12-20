@@ -13,10 +13,12 @@ $ npm install io-spin
 ## Example
 
 ```javascript
-spin.start('Downloading:', 'Spin1')
-spin.restart('Computing:', 'Box1')
-spin.stop()
-spin.destroy()
+var Spin = require('io-spin')
+var spin = new Spin()
+// Spin(type, placeholder)
+
+spin.start()
+// call spin.stop() to stop spinner
 ```
 
 ## GIF (original from tj/go-spin)
@@ -25,4 +27,4 @@ spin.destroy()
 
 ## License
 
-MIT
+MIT &copy; [EGOIST](https://github.com/egoist)
