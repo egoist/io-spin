@@ -37,6 +37,7 @@ Spin.prototype = {
     }.bind(this), 100)
   },
   stop: function () {
+    process.stdout.write('\r')
     clearInterval(this.loop)
   }
 }
