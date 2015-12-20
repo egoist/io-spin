@@ -1,6 +1,9 @@
 # io-spin
 
-[![NPM](https://nodei.co/npm/io-spin.png?downloads=true&stars=true)](https://nodei.co/npm/io-spin/)
+[![NPM version](https://img.shields.io/npm/v/io-spin.svg)](https://www.npmjs.com/package/io-spin)
+[![NPM download](https://img.shields.io/npm/dm/io-spin.svg)](https://www.npmjs.com/package/io-spin)
+[![Build Status: Linux](https://travis-ci.org/egoist/io-spin.svg?branch=master)](https://travis-ci.org/egoist/io-spin)
+[![Package Quality](http://npm.packagequality.com/shield/io-spin.svg)](http://packagequality.com/#?package=io-spin)
 
 Little terminal spinner lib for Node.js and io.js
 
