@@ -6,6 +6,8 @@
 
 Little terminal spinner lib for Node.js and io.js
 
+![io-spin.gif](https://ooo.0o0.ooo/2015/12/20/567768f40ac91.gif)
+
 ## Installation
 
 ```bash
