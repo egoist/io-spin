@@ -1,21 +1,4 @@
-var spinners = {
-  Box1: '⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏',
-  Box2: '⠋⠙⠚⠞⠖⠦⠴⠲⠳⠓',
-  Box3: '⠄⠆⠇⠋⠙⠸⠰⠠⠰⠸⠙⠋⠇⠆',
-  Box4: '⠋⠙⠚⠒⠂⠂⠒⠲⠴⠦⠖⠒⠐⠐⠒⠓⠋',
-  Box5: '⠁⠉⠙⠚⠒⠂⠂⠒⠲⠴⠤⠄⠄⠤⠴⠲⠒⠂⠂⠒⠚⠙⠉⠁',
-  Box6: '⠈⠉⠋⠓⠒⠐⠐⠒⠖⠦⠤⠠⠠⠤⠦⠖⠒⠐⠐⠒⠓⠋⠉⠈',
-  Box7: '⠁⠁⠉⠙⠚⠒⠂⠂⠒⠲⠴⠤⠄⠄⠤⠠⠠⠤⠦⠖⠒⠐⠐⠒⠓⠋⠉⠈⠈',
-  Spin1: '|/-\\',
-  Spin2: '◴◷◶◵',
-  Spin3: '◰◳◲◱',
-  Spin4: '◐◓◑◒',
-  Spin5: '▉▊▋▌▍▎▏▎▍▌▋▊▉',
-  Spin6: '▌▄▐▀',
-  Spin7: '╫╪',
-  Spin8: '■□▪▫',
-  Spin9: '←↑→↓'
-}
+var spinners = require('./spinners')
 
 function Spin (type, words) {
   this.pos = 0
@@ -26,10 +9,10 @@ function Spin (type, words) {
 Spin.prototype = {
   counstructor: Spin,
   start: function () {
-    var spinner = spinners[this.type]
+    this.spinner = spinners[this.type]
     this.loop = setInterval(function () {
-      process.stdout.write('\r' + this.words + spinner.charAt(this.pos))
-      if (this.pos === spinner.length - 1) {
+      process.stdout.write('\r' + this.words + this.spinner[this.pos] + ' ')
+      if (this.pos === this.spinner.length - 1) {
         this.pos = 0
       } else {
         this.pos++
@@ -37,8 +20,13 @@ Spin.prototype = {
     }.bind(this), 100)
   },
   stop: function () {
+    process.stdout.clearLine()
     process.stdout.write('\r')
     clearInterval(this.loop)
+  },
+  update: function (words) {
+    process.stdout.clearLine()
+    this.words = words + ' '
   }
 }
 

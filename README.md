@@ -21,7 +21,12 @@ var spin = new Spin()
 
 spin.start()
 // call spin.stop() to stop spinner
+spin.update(placeholder)
+// upload placeholder
+// eg: update Installing 0% to Installing 1%
 ```
+
+[Checkout all the spinner types!](/spinners.json)
 
 ## GIF (original from tj/go-spin)
 
