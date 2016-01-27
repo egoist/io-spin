@@ -1,5 +1,5 @@
 var Spin = require('..')
-var spin = new Spin('Spin1', 'Installing')
+var spin = new Spin('Dot2', 'Installing')
 
 spin.start()
 

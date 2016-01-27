@@ -1,6 +1,6 @@
 {
   "name": "io-spin",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "TJ Holowaychuk's go-spin node.js port",
   "main": "spin.js",
   "scripts": {
