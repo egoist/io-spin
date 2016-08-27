@@ -20,9 +20,9 @@ $ npm install io-spin
 var spin = require('io-spin')
 var spinner = spin('Fetching data')
 
-spin.start()
-spin.stop()
-spin.update(placeholder)
+spinner.start()
+spinner.stop()
+spinner.update(placeholder)
 // upload placeholder
 // eg: update Installing 0% to Installing 1%
 ```
