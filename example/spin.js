@@ -1,7 +1,5 @@
-var Spin = require('..')
-var spin = new Spin('Dot2', 'Installing')
-
-spin.start()
+var io = require('..')
+var spin = io('Installing').start()
 
 var deps = [
   'lodash',
