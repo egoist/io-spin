@@ -1,5 +1,5 @@
 var io = require('..')
-var spin = io('Installing').start()
+var spin = io('Installing', 'Box1').start()
 
 var deps = [
   'lodash',
