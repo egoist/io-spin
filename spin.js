@@ -13,7 +13,10 @@ Spin.prototype = {
   start: function () {
     this.spinner = spinners[this.type]
     this.loop = setInterval(function () {
-      process.stdout.write('\r' + this.spinner[this.pos] + ' ' + this.placeholder)
+      var msg = '\r' + this.spinner[this.pos] + ' ' + this.placeholder
+      var columns = typeof process.stderr.columns === 'number' ? process.stderr.columns : 100
+      msg = msg.slice(0, columns)
+      process.stdout.write(msg)
       this.pos = ++this.pos % this.spinner.length
     }.bind(this), 100)
     return this
